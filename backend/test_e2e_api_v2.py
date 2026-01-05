@@ -23,7 +23,7 @@ def test_e2e():
         "email": email,
         "password": password
     }
-    response = client.post("/api/users/", json=signup_data)
+    response = client.post("/api/users", json=signup_data)
     if response.status_code == 200:
         print("SUCCESS: User created.")
     else:
@@ -54,7 +54,7 @@ def test_e2e():
         "evidence_url": ""
     }
     headers = {"Authorization": f"Bearer {token}"}
-    response = client.post("/api/issues/", json=issue_data, headers=headers)
+    response = client.post("/api/issues", json=issue_data, headers=headers)
     if response.status_code == 200:
         print(f"SUCCESS: {response.json().get('message')}")
     else:
@@ -63,7 +63,7 @@ def test_e2e():
 
     # 4. Verify in Community Feed
     print("\n[4] Verifying in Community Feed...")
-    response = client.get("/api/issues/")
+    response = client.get("/api/issues")
     if response.status_code == 200:
         issues = response.json()
         found = any(i['title'] == issue_data['title'] for i in issues)

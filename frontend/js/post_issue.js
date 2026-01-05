@@ -28,7 +28,7 @@ function submitIssue(event) {
         description: description
     };
 
-    fetch(`${API_CONFIG.BASE_URL}/issues/`, {
+    fetch(`${API_CONFIG.BASE_URL}/issues`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

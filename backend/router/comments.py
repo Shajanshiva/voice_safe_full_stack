@@ -6,7 +6,7 @@ from backend.schemas import commentBase
 
 router = APIRouter(prefix= "/comments")
 
-@router.get("/")
+@router.get("")
 def get_all_comments(db:Session = Depends(get_db)):
     return db.query(Comment).all()
 
@@ -18,7 +18,7 @@ def get_comment_id(comment_id:int, db:Session = Depends(get_db)):
     else:
         return {"message":"Comment not found"}
 
-@router.post("/")
+@router.post("")
 def create_comment(detail:commentBase, db:Session = Depends(get_db)):
     new_comment = Comment(**detail.model_dump())
     db.add(new_comment)

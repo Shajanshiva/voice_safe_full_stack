@@ -12,7 +12,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 
 router = APIRouter(prefix="/users")
 
-@router.get("/", response_model=list[UserResponse])
+@router.get("", response_model=list[UserResponse])
 def get_all_users(db: Session = Depends(get_db),current_user: int = Depends(get_current_user)):
     return db.query(User).all()
 
@@ -26,7 +26,7 @@ def get_user_by_id(user_id: int, db: Session = Depends(get_db)):
         return {"message": "User not found"}
     
 
-@router.post("/", response_model=UserResponse)
+@router.post("")
 def create_user(user: UserBase, db: Session = Depends(get_db)):
     user_data = user.model_dump()
     user_data["password"] = hash_password(user_data["password"])

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", loadIssues);
 
 function loadIssues() {
-  fetch(`${API_CONFIG.BASE_URL}/issues/`)
+  fetch(`${API_CONFIG.BASE_URL}/issues`)
     .then(response => response.json())
     .then(data => {
       const container = document.getElementById("storiesContainer");

@@ -8,7 +8,7 @@ from backend.dependencies import get_current_user
 
 router = APIRouter(prefix= "/issues")
 
-@router.get("/")
+@router.get("")
 def get_all_issues(db:Session = Depends(get_db)):
     return db.query(Issue).all()
 
@@ -50,7 +50,7 @@ def get_issue_by_id(issue_id:int, db:Session = Depends(get_db)):
     else:
         return {"message":"Issue not found"}
     
-@router.post("/")
+@router.post("")
 def create_issue(
     detail: IssueBase,
     db: Session = Depends(get_db),

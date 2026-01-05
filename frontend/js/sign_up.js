@@ -16,22 +16,28 @@ function createUser() {
     password: password,
   };
 
-  fetch(`${API_CONFIG.BASE_URL}/users/`, {
+  fetch(`${API_CONFIG.BASE_URL}/users`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(user_data),
   })
-    .then((response) => response.json())
+    .then(async (response) => {
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error(`Error ${response.status}: ${response.statusText}`, errorText);
+        throw new Error(errorText || `Server responded with ${response.status}`);
+      }
+      return response.json();
+    })
     .then((data) => {
       console.log("Success:", data);
       alert("User " + username + " created successfully!");
       window.location.href = "./login.html";
     })
-
     .catch((error) => {
-      console.error("Error:", error);
-      alert("Error creating user.");
+      console.error("Error details:", error);
+      alert("Error creating user: " + error.message);
     });
 }
