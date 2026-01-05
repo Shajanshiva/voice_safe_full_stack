@@ -35,7 +35,11 @@ function verify_user(event) {
         .then(data => {
             alert("Login successful!");
 
+            // Store authentication data
             localStorage.setItem("access_token", data.access_token);
+            localStorage.setItem("user_id", data.user_id);
+            localStorage.setItem("email", data.email);
+            localStorage.setItem("full_name", data.full_name);
 
             window.location.href = "../index.html";
         })
