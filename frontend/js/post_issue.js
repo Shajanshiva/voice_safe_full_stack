@@ -21,14 +21,14 @@ function submitIssue(event) {
         return;
     }
 
-  
+
     const issue_data = {
         title: title,
         category_name: category,
         description: description
     };
 
-    fetch("http://127.0.0.1:8000/issues/", {
+    fetch(`${API_CONFIG.BASE_URL}/issues/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -36,22 +36,22 @@ function submitIssue(event) {
         },
         body: JSON.stringify(issue_data)
     })
-    .then(async (response) => {
-        const data = await response.json();
+        .then(async (response) => {
+            const data = await response.json();
 
-        if (!response.ok) {
-            throw new Error(data.detail || "Failed to submit issue");
-        }
+            if (!response.ok) {
+                throw new Error(data.detail || "Failed to submit issue");
+            }
 
-        return data;
-    })
-    .then((data) => {
-        alert(data.message);
-        document.querySelector(".report-form").reset();
-    })
-    .catch((error) => {
-        alert(error.message);
-    });
+            return data;
+        })
+        .then((data) => {
+            alert(data.message);
+            document.querySelector(".report-form").reset();
+        })
+        .catch((error) => {
+            alert(error.message);
+        });
 }
 
 

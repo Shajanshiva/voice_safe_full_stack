@@ -1,151 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VoiceSafe - Report an Issue</title>
-    <link rel="stylesheet" href="../styles/post_issue.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="header-content">
-          <div class="logo">
-            <span class="logo-icon">🛡️</span>
-            <span class="logo-text">VoiceSafe</span>
-          </div>
-          <nav class="nav">
-            <a href="../index.html" class="nav-link">Home</a>
-            <a href="#post" class="nav-link">Post Issue</a>
-            <a href="../pages/community.html" class="nav-link">Community</a>
-            <a href="../pages/resources.html" class="nav-link">Resources</a>
-            <a href="../pages/insight.html" class="nav-link">Insights</a>
-          </nav>
-          <div class="header-actions">
-            <button class="btn-login" id="loginBtn">Login</button>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoiceSafe - Report an Issue</title>
+  <link rel="stylesheet" href="../styles/post_issue.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <span class="logo-icon">🛡️</span>
+          <span class="logo-text">VoiceSafe</span>
+        </div>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Home</a>
+          <a href="#post" class="nav-link">Post Issue</a>
+          <a href="../pages/community.html" class="nav-link">Community</a>
+          <a href="../pages/resources.html" class="nav-link">Resources</a>
+          <a href="../pages/insight.html" class="nav-link">Insights</a>
+        </nav>
+        <div class="header-actions">
+          <button class="btn-login" id="loginBtn">Login</button>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <section class="report-container">
-      <h1>Report an Issue</h1>
-      <p class="subtitle">
-        Share your workplace concerns safely and bravely
+  <section class="report-container">
+    <h1>Report an Issue</h1>
+    <p class="subtitle">
+      Share your workplace concerns safely and bravely
+    </p>
+
+    <div class="privacy-box">
+      <h3>Your Privacy is Protected:</h3>
+      <p>
+        All reports are completely safe. We do not collect IP addresses,
+        personal information, or any identifying data.
       </p>
+    </div>
 
-      <div class="privacy-box">
-        <h3>Your Privacy is Protected:</h3>
-        <p>
-          All reports are completely safe. We do not collect IP addresses,
-          personal information, or any identifying data.
-        </p>
+    <form class="report-form" id="issueForm">
+      <h2>Report Form</h2>
+
+      <label for="title">Title *</label>
+      <textarea id="title" maxlength="30" placeholder="Please provide title about the incident."></textarea>
+
+      <label for="category">Category *</label>
+      <select id="category" required>
+        <option value="">Select the type of issue you're reporting</option>
+        <option value="Harassment">Harassment</option>
+        <option value="Discrimination">Discrimination</option>
+        <option value="Favoritism">Favoritism</option>
+        <option value="Bullying">Bullying</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="description">Describe your issue *</label>
+      <textarea id="description" maxlength="2000"
+        placeholder="Please provide details about the incident, including when it happened, who was involved (you can use initials or roles instead of names), and how it affected you."></textarea>
+
+      <p class="char-count">0/2000 characters</p>
+
+      <div class="guidelines">
+        <strong>Posting Guidelines:</strong>
+        <ul>
+          <li>Be respectful and professional in your language</li>
+          <li>Focus on facts and avoid speculation</li>
+          <li>Do not include full names or identifying information</li>
+          <li>Reports are reviewed before being published</li>
+        </ul>
       </div>
 
-      <form class="report-form" id="issueForm">
-        <h2>Report Form</h2>
+      <div class="buttons">
+        <button type="submit" class="submit-btn">Submit Report</button>
+        <button type="button" class="cancel-btn">Cancel</button>
 
-         <label for="title">Title *</label>
-        <textarea
-          id="title"
-          maxlength="30"
-          placeholder="Please provide title about the incident."
-        ></textarea>
+      </div>
+    </form>
 
-        <label for="category">Category *</label>
-        <select id="category" required>
-          <option value="">Select the type of issue you're reporting</option>
-          <option value="Harassment">Harassment</option>
-          <option value="Discrimination">Discrimination</option>
-          <option value="Favoritism">Favoritism</option>
-          <option value="Bullying">Bullying</option>
-          <option value="Other">Other</option>
-        </select>
-
-        <label for="description">Describe your issue *</label>
-        <textarea
-          id="description"
-          maxlength="2000"
-          placeholder="Please provide details about the incident, including when it happened, who was involved (you can use initials or roles instead of names), and how it affected you."
-        ></textarea>
-
-        <p class="char-count">0/2000 characters</p>
-
-        <div class="guidelines">
-          <strong>Posting Guidelines:</strong>
-          <ul>
-            <li>Be respectful and professional in your language</li>
-            <li>Focus on facts and avoid speculation</li>
-            <li>Do not include full names or identifying information</li>
-            <li>Reports are reviewed before being published</li>
-          </ul>
-        </div>
-
-        <div class="buttons">
-          <button type="submit" class="submit-btn">Submit Report</button>
-          <button type="button" class="cancel-btn">Cancel</button>
-
-        </div>
-      </form>
-
-      <div class="help-section">
-        <h2>Need Immediate Help?</h2>
-        <div class="help-box">
-          <div>
-            <h3>Emergency Support</h3>
-            <p>Women Helpline: 1091</p>
-            <p>Police Emergency: 100</p>
-          </div>
+    <div class="help-section">
+      <h2>Need Immediate Help?</h2>
+      <div class="help-box">
+        <div>
+          <h3>Emergency Support</h3>
+          <p>Women Helpline: 1091</p>
+          <p>Police Emergency: 100</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-section">
-            <div class="footer-logo">
-              <span class="logo-icon">🛡️</span>
-              <span>VoiceSafe</span>
-            </div>
-            <p>
-              Empowering safe workplace reporting for a better
-              tomorrow.
-            </p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <span class="logo-icon">🛡️</span>
+            <span>VoiceSafe</span>
           </div>
-          <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Post Issue</a></li>
-              <li><a href="#">Community</a></li>
-              <li><a href="#">Resources</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>Support</h4>
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Legal Help</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h4>Emergency Support</h4>
-            <p><strong>Women Helpline:</strong><br />1091</p>
-            <p><strong>HR Grievance:</strong><br />1800-XXX-XXXX</p>
-          </div>
-        </div>
-        <div class="footer-bottom">
           <p>
-            &copy; 2025 VoiceSafe. All rights reserved. | Built for safer
-            workplaces.
+            Empowering safe workplace reporting for a better
+            tomorrow.
           </p>
         </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Post Issue</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Legal Help</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Emergency Support</h4>
+          <p><strong>Women Helpline:</strong><br />1091</p>
+          <p><strong>HR Grievance:</strong><br />1800-XXX-XXXX</p>
+        </div>
       </div>
-    </footer>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 VoiceSafe. All rights reserved. | Built for safer
+          workplaces.
+        </p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="../js/post_issue.js"></script>
-  </body>
+  <script src="../js/config.js"></script>
+  <script src="../js/post_issue.js"></script>
+</body>
+
 </html>

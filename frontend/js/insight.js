@@ -10,7 +10,7 @@ async function loadCategoryPieChart() {
     }
 
     const response = await fetch(
-      "http://127.0.0.1:8000/issues/category-count",
+      `${API_CONFIG.BASE_URL}/issues/category-count`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -63,16 +63,16 @@ async function loadCategoryPieChart() {
 }
 
 document.getElementById("loginBtn").addEventListener("click", () => {
-    window.location.href = "../pages/login.html";
+  window.location.href = "../pages/login.html";
 });
 
 document.getElementById("postIssueBtn").addEventListener("click", () => {
-    const userId = localStorage.getItem("user_id");
+  const userId = localStorage.getItem("user_id");
 
-    if (!userId) {
-        alert("Please login to post an issue.");
-        window.location.href = "../pages/login.html";
-    } else {
-        window.location.href = "../pages/post_issue.html";
-    }
+  if (!userId) {
+    alert("Please login to post an issue.");
+    window.location.href = "../pages/login.html";
+  } else {
+    window.location.href = "../pages/post_issue.html";
+  }
 });
