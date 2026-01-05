@@ -15,6 +15,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/ping")
+def ping():
+    return {"message": "pong"}
+
 app.include_router(users.router, prefix="/api")
 app.include_router(issues.router, prefix="/api")
 app.include_router(comments.router, prefix="/api")
