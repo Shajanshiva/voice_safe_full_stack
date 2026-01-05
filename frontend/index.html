@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoiceSafe - Speak Up Safely, Stay Anonymous</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <span class="logo-icon">🛡️</span>
+            <span class="logo-text">VoiceSafe</span>
+          </div>
+          <nav class="nav">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="./pages/post_issue.html" class="nav-link">Post Issue</a>
+            <a href="./pages/community.html" class="nav-link">Community</a>
+            <a href="./pages/resources.html" class="nav-link">Resources</a>
+            <a href="./pages/insight.html" class="nav-link">Insights</a>
+          </nav>
+          <div class="header-actions">
+            <button class="btn-login" id="loginBtn">Login</button>
+            <button class="btn-primary" id="postIssueBtn">Post Issue</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Speak Up Safely.<br />Stay Brave.</h1>
+            <p>
+              Report workplace harassment, favoritism, and bias without fear.
+              Your voice matters, your identity stays safe.
+            </p>
+
+            <div class="hero-buttons">
+              <button class="btn-primary" id="postStoryBtn">
+                Post Your Story →
+              </button>
+
+              <button class="btn-secondary" id="readStoriesBtn">
+                Read Stories
+              </button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
+              alt="Team meeting"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <p class="section-subtitle">
+          Three simple steps to make your workplace safer and more equitable
+        </p>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-icon">📝</div>
+            <h3>Post your issue<br />Here</h3>
+            <p>
+              Share your workplace concerns safely without revealing your
+              identity
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-icon">👥</div>
+            <h3>Get support &<br />advice</h3>
+            <p>
+              Connect with community members and access professional resources
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-icon">📊</div>
+            <h3>Explore data<br />insights</h3>
+            <p>
+              View trends and patterns to understand workplace issues better
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="container">
+        <h2>Popular Categories</h2>
+        <p class="section-subtitle">
+          Browse issues by category to find relevant discussions
+        </p>
+        <div class="categories-grid">
+          <div class="category-card harassment">
+            <span class="category-label">Harassment</span>
+            <span class="category-count">124 reports</span>
+          </div>
+          <div class="category-card favoritism">
+            <span class="category-label">Favoritism</span>
+            <span class="category-count">89 reports</span>
+          </div>
+          <div class="category-card gender-bias">
+            <span class="category-label">Gender Bias</span>
+            <span class="category-count">156 reports</span>
+          </div>
+          <div class="category-card inequality">
+            <span class="category-label">Inequality</span>
+            <span class="category-count">203 reports</span>
+          </div>
+          <div class="category-card bullying">
+            <span class="category-label">Bullying</span>
+            <span class="category-count">97 reports</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recent-reports">
+      <div class="container">
+        <div class="section-header">
+          <h2>Recent Reports</h2>
+          <a href="./pages/community.html" class="view-all">View All →</a>
+        </div>
+        <p class="section-subtitle">
+          Latest anonymous reports from the community
+        </p>
+        <div class="reports-grid">
+          <div class="report-card">
+            <div class="report-header">
+              <span class="report-category favoritism">Favoritism</span>
+              <span class="report-time">2 hours ago</span>
+            </div>
+            <h3>
+              Manager promoted his relative despite better qualified candidates
+            </h3>
+            <p>Clear case of nepotism affecting team morale and fairness...</p>
+            <div class="report-footer">
+              <span class="likes">👍 23</span>
+              <span class="comments">💬 8</span>
+            </div>
+          </div>
+          <div class="report-card">
+            <div class="report-header">
+              <span class="report-category harassment">Harassment</span>
+              <span class="report-time">5 hours ago</span>
+            </div>
+            <h3>Unwanted comments about appearance during team meetings</h3>
+            <p>
+              Repeated inappropriate comments making work environment
+              uncomfortable...
+            </p>
+            <div class="report-footer">
+              <span class="likes">👍 45</span>
+              <span class="comments">💬 12</span>
+            </div>
+          </div>
+          <div class="report-card">
+            <div class="report-header">
+              <span class="report-category gender-bias">Gender Bias</span>
+              <span class="report-time">1 day ago</span>
+            </div>
+            <h3>Pay disparity between male and female colleagues</h3>
+            <p>
+              Same role, same experience, but significant salary difference...
+            </p>
+            <div class="report-footer">
+              <span class="likes">👍 67</span>
+              <span class="comments">💬 24</span>
+            </div>
+          </div>
+          <div class="report-card">
+            <div class="report-header">
+              <span class="report-category inequality">Inequality</span>
+              <span class="report-time">2 days ago</span>
+            </div>
+            <h3>Excluded from important project meetings</h3>
+            <p>Consistently left out of key discussions affecting my work...</p>
+            <div class="report-footer">
+              <span class="likes">👍 34</span>
+              <span class="comments">💬 15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to Make a Difference?</h2>
+        <p>
+          Join thousands of others creating safer, more equitable workplaces
+          through reporting
+        </p>
+        <div class="cta-buttons">
+          <button class="btn-primary-light">
+            <a href="./pages/post_issue.html">Share Your Story</a>
+          </button>
+          <button class="btn-secondary-light">Get Support</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <span class="logo-icon">🛡️</span>
+              <span>VoiceSafe</span>
+            </div>
+            <p>
+              Empowering safe workplace reporting for a better
+              tomorrow.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Post Issue</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Legal Help</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Emergency Support</h4>
+            <p><strong>Women Helpline:</strong><br />1091</p>
+            <p><strong>HR Grievance:</strong><br />1800-XXX-XXXX</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 VoiceSafe. All rights reserved. | Built for safer
+            workplaces.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script src="./js/index.js"></script>
+</html>

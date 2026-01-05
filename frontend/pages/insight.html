@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoiceSafe - Workplace Insights Dashboard</title>
+    <link rel="stylesheet" href="../styles/insight.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <span class="logo-icon">🛡️</span>
+            <span class="logo-text">VoiceSafe</span>
+          </div>
+          <nav class="nav">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="../pages/post_issue.html" class="nav-link">Post Issue</a>
+            <a href="../pages/community.html" class="nav-link">Community</a>
+            <a href="../pages/resources.html" class="nav-link">Resources</a>
+            <a href="#insights" class="nav-link">Insights</a>
+          </nav>
+          <div class="header-actions">
+            <button class="btn-login" id="loginBtn">Login</button>
+            <button class="btn-primary" id="postIssueBtn">Post Issue</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="dashboard">
+      <h1>Workplace Insights Dashboard</h1>
+      <p class="subtitle">
+        Data-driven insights into workplace issues and trends
+      </p>
+
+      <div class="charts">
+        <div class="chart-card">
+          <h3>Issues Distribution by Category</h3>
+          <canvas id="categoryPieChart"></canvas>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <h3>Understanding the Data</h3>
+        <p>
+          These insights help identify patterns in workplace issues across
+          different sectors and regions. The data shows that inequality and
+          gender bias are the most prevalent issues, particularly in tech and
+          finance sectors. This information can help organizations and
+          policymakers address systemic problems more effectively.
+        </p>
+        <div class="info-buttons">
+          <button class="primary">
+            <a href="../pages/community.html">View Community Stories</a>
+          </button>
+          <button>Access Resources</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <span class="logo-icon">🛡️</span>
+              <span>VoiceSafe</span>
+            </div>
+            <p>
+              Empowering safe and anonymous workplace reporting for a better
+              tomorrow.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Post Issue</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Legal Help</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Emergency Support</h4>
+            <p><strong>Women Helpline:</strong><br />1091</p>
+            <p><strong>HR Grievance:</strong><br />1800-XXX-XXXX</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 VoiceSafe. All rights reserved. | Built for safer
+            workplaces.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/insight.js"></script>
+  </body>
+</html>
